@@ -4,7 +4,9 @@ const mongoose = require('mongoose')
 const {Schema} = mongoose
 
 const app = express();
+const cors = require('cors')
 const PORT = 8080;
+app.use(cors())
 
 const productSchema= new Schema({
     name:{type:String,required:true},
